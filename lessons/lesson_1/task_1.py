@@ -23,7 +23,7 @@ urls = [
         'https://w.forfun.com/fetch/01/01c91cfdb4cac3029bd3b07b8ce9d94f.jpeg?h=1200&r=0.5',
         'https://w.forfun.com/fetch/c0/c0a1ac30cfed77becf946f9238a353fd.jpeg?h=1200&r=0.5'
         ]
-PATH_PHOTO = '../../data/lesson_1/photo'
+PATH_PHOTO = '../../data/lesson_1_task_1/photo'
 
 
 # Синхронное скачивание
@@ -58,5 +58,5 @@ async def main2(urls):
 
 
 if __name__ == '__main__':
-    main1(urls)               # Время выполнения функции main1: 4.884244 сек.
-    asyncio.run(main2(urls))  # Время выполнения функции main2: 4.818635 сек.
+    main1(urls)               # Время выполнения синхронной функции main1: 4.824937 сек.
+    asyncio.run(main2(urls))  # Время выполнения асинхронной функции main2: 0.537225 сек.
