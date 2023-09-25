@@ -27,7 +27,7 @@ def sync_scrab(url):
         return False
 
 
-# Асинхронное скачивание
+# Асинхронное определение доступности серверов
 async def async_scrab(url):
     async with aiohttp.ClientSession() as session:
         async with session.get(url=url, ssl=False) as content:
