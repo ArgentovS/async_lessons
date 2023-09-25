@@ -15,24 +15,26 @@ time_periods = [elem for elem in range(1, 6)]
 print(time_periods)
 
 
-# Синхронные задачи
+# Синхронные задачи выполнение очереди задач
 def sync_sleep(period):
     time.sleep(period)
     print(f'Прошло: {period} сек.')
 
 
-# Асинхронное задачи
+# Асинхронные задачи выполнение очереди задач
 async def async_sleep(period):
     await asyncio.sleep(period)
     print(f'Прошло: {period} сек.')
 
 
+# Синхронное выполнение задач
 @timeit
 def main1(periods):
     for period in time_periods:
         sync_sleep(period)
 
 
+# Асинхронное выполнение задач
 @timeit
 async def main2(periods):
     tasks = []
